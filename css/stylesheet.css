@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Nightingale';
   src:
-    url('../Nightingale-Light.woff') format('woff');
+    url('./Nightingale-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -397,6 +397,7 @@ h1.cathy {
 }
 
 .downloadsection {
+  font-family: 'Sailec';
   max-height: 39vh;
   max-width: 82%;
   margin: 0 auto;
