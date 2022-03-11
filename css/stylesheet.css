@@ -330,7 +330,7 @@ h1.cathy {
   width: 10.5%;
   background: #000;
   top: 50%;
-  left: 6.5%;
+  left: 6.2%;
   bottom: 0;
 }
 
@@ -397,7 +397,7 @@ h1.cathy {
 }
 
 .downloadsection {
-  min-height: 39vh;
+  max-height: 39vh;
   max-width: 82%;
   margin: 0 auto;
   display: flex;
@@ -405,6 +405,7 @@ h1.cathy {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px 0;
 }
 
 
