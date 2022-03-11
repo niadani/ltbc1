@@ -1,14 +1,6 @@
 @font-face {
-  font-family: 'Sailec';
-  src: 'fonts\Sailec-Regular.woff';
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Nightingale';
-  src: 'fonts\Nightingale-Light.woff',
+  src:
     url('../Nightingale-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
@@ -58,12 +50,14 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--mainwhite);
+  position: relative;
 }
 
 img {
   display: block;
   width: 100%;
   height: auto;
+  image-rendering: smooth;
 }
 
 * {
@@ -104,6 +98,19 @@ p {
   font-size: 2.8em;
 }
 
+.gemtext {
+  background: url('https://media.istockphoto.com/photos/diamond-background-picture-id520641063?k=20&m=520641063&s=612x612&w=0&h=oHpPSkGkYK2--gHJruV1vLXVIU6Qot5YBC549ZM6eGw=') no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
 .atext {
   font-size: 1.3em;
   vertical-align: middle;
@@ -135,7 +142,7 @@ ul {
   position: relative;
 }
 
-.dropdown-content {
+/* .dropdown-content {
   z-index: 1;
   display: none;
   position: absolute;
@@ -146,7 +153,7 @@ ul {
   border-radius: 4px;
   right: -33px;
   top: 100%;
-  /* use this */
+
 }
 
 .dropdown-content a:hover {
@@ -154,19 +161,46 @@ ul {
   background: #343A60;
   border-radius: 4px;
 }
+*/
+.dropdown-content {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  border-radius: 4px;
+  right: -33px;
+  top: 100%;
+
+}
+
+.purplehover {
+  display: inline-block;
+  background: var(--mainwhite);
+  text-decoration: none;
+  -webkit-transition: background .3s;
+  /* For Safari 3.0 to 6.0 */
+  transition: background .3s;
+  /* For modern browsers */
+}
+
+.purplehover:hover {
+  background: #343A60;
+  color: white;
+}
 
 .dropdown-content a {
   display: block;
   padding: 17px 13px;
   color: var(--black);
   text-decoration: none;
-  font-size: 19px;
+  font-size: 18px;
   margin-top: 2%;
   text-align: center;
 }
 
 .purplehover {
-  margin-bottom: 4px;
+
+  border-radius: 4px;
 }
 
 
@@ -186,16 +220,16 @@ ul {
 }
 
 .menu-line {
-  width: 20px;
-  height: 3px;
+  width: 33px;
+  height: 2px;
   background-color: black;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 nav {
   font-family: 'Sailec';
   font-size: 19px;
-
+  text-transform: capitalize;
 }
 
 
@@ -223,11 +257,12 @@ nav {
   text-align: center;
 }
 
-h1 {
+
+h1.cathy {
   background: url('https://media0.giphy.com/media/rRVcEiqOUkPPS6NoJe/giphy.gif?cid=790b7611d01f9873866bbdbe2a42eeac652afae22c435805&rid=giphy.gif&ct=g') no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  background-size: 250px;
+  background-size: 290px;
   -webkit-text-fill-color: transparent;
 }
 
@@ -244,18 +279,18 @@ h1 {
   margin-left: 7px;
 }
 
-.cathomepage {
-  min-height: 70vh;
+.catguide {
+
   max-width: 63%;
   margin: 0 auto;
-
+  padding-bottom: 10%;
 }
 
 #cathomepage {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 88.5vh;
+  min-height: 70.5vh;
   max-width: 63%;
   margin: 0 auto;
 
@@ -263,7 +298,7 @@ h1 {
 
 
 
-.cathomepageinner {
+.catguide-inner {
   padding-top: 14em;
 }
 
@@ -271,8 +306,15 @@ h1 {
   margin-bottom: 120px;
 }
 
+.previewsection {
+  display: flex;
+  min-height: 60.5vh;
+  max-width: 63%;
+  margin: 0 auto;
+}
+
 .pcat {
-  margin-left: 19%;
+  padding-left: 20%;
   border-color: black;
   position: relative;
   /*background: -webkit-linear-gradient(var(--black),var(--lavender), #343a60,var(--black));
@@ -284,13 +326,14 @@ h1 {
   content: "";
   display: block;
   position: absolute;
-  height: 2px;
-  width: 120px;
+  height: 1.8px;
+  width: 10.5%;
   background: #000;
   top: 50%;
-  left: -16%;
+  left: 6.5%;
   bottom: 0;
 }
+
 
 .catlogo {
   height: 4em;
@@ -305,7 +348,7 @@ h1 {
 }
 
 .guidesection {
-  min-height: 56vh;
+
   max-width: 63%;
   margin: 0 auto;
   margin-bottom: .8%;
@@ -388,8 +431,9 @@ footer {
 }
 
 #wrapper {
-  min-height: 100%;
+  /*min-height: 100%;*/
   position: relative;
+  min-width: 300px;
 }
 
 #footer {
@@ -403,7 +447,6 @@ footer {
   align-items: center;
   font-size: .96em;
   justify-content: space-between;
-
   width: 100%;
   position: fixed;
   left: 0;
@@ -426,6 +469,10 @@ footer>a {
   h2 {
     font-size: 5.5em;
   }
+
+  .pcat {
+    font-size: 2.45em;
+  }
 }
 
 /* 
@@ -437,14 +484,16 @@ footer>a {
 
   /* CSS */
   footer {
-    background-color: var(--black);
-    display: flex;
     padding: 0 19%;
 
   }
 
   .spacemid {
     margin-right: 27%;
+  }
+
+  .pcat {
+    font-size: 2.25em;
   }
 
   h1 {
@@ -455,7 +504,7 @@ footer>a {
     font-size: 5em;
   }
 
-  .guidesection {
+  .navbar, .catguide, .guidesection, .pdfdownloadsection {
     max-width: 70%;
   }
 }
@@ -489,13 +538,22 @@ footer>a {
     font-size: 5em;
   }
 
-  h1 {
+  h1.cathy {
     font-size: 9em;
     background-size: 300px;
   }
 
-  .guidesection {
+  .navbar, .catguide, .guidesection, .pdfdownloadsection {
     max-width: 80%;
+  }
+
+  .guidesection {
+    padding-bottom: 4em;
+  }
+
+  .catguide-inner {
+
+    padding-bottom: 2em;
   }
 
 }
@@ -516,27 +574,30 @@ footer>a {
 
 @media (min-width: 567px) and (max-width: 767px) {
   footer {
-    background-color: var(--black);
-    display: flex;
     height: 72px;
     padding: 0 2%;
-    color: white;
-    font-family: 'Sailec';
-    vertical-align: middle;
-    align-items: center;
     font-size: 1.1em;
-    justify-content: space-between;
   }
 
   h2 {
     font-size: 4em;
   }
 
-  .course {
+  .catguide-inner {
+    padding-top: 8em;
+    padding-bottom: 5em;
+  }
+
+  .course, .pcat {
     font-size: 1.8em;
   }
 
   .guidesection {
+
+    margin-bottom: 4.5%;
+  }
+
+  .pdfdownloadsection, .catguide, .guidesection, .navbar {
     max-width: 90%;
   }
 
@@ -548,9 +609,6 @@ footer>a {
     width: 1.3em;
   }
 
-  .navbar {
-    max-width: 80%;
-  }
 }
 
 @media (min-width: 481px) and (max-width: 567px) {
@@ -558,13 +616,14 @@ footer>a {
     font-size: 2.9em;
   }
 
-  .course {
+  .course, .pcat {
     font-size: 1.8em;
   }
 
-  .guidesection {
+  .guidesection, .catguide, .pdfdownloadsection {
     max-width: 90%;
   }
+
 
   .h3 {
     font-size: 2.2em;
@@ -577,6 +636,11 @@ footer>a {
   h1 {
     font-size: 9em;
     background-size: 300px;
+  }
+
+  footer {
+    padding: 0 1%;
+
   }
 }
 
@@ -594,8 +658,9 @@ footer>a {
     font-size: 3em;
   }
 
-  .cathomepageinner {
+  .catguide-inner {
     padding-top: 10em;
+    padding-bottom: 6em;
   }
 
   .h3 {
@@ -603,11 +668,21 @@ footer>a {
   }
 
   .course {
-    font-size: 1em;
+    font-size: 24px;
   }
 
-  .guidesection {
+  .downloadsection {
+    min-height: 25vh;
+  }
+
+  .catguide, .guidesection, .pdfdownloadsection {
     max-width: 90%;
+    padding-bottom: 10%;
+    min-height: fit-content;
+  }
+
+  .pcat {
+    font-size: 1.11em;
   }
 
   .downloadlink {
