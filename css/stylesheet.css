@@ -1,11 +1,40 @@
 @font-face {
   font-family: 'Nightingale';
-  src:
-    url('./Nightingale-Light.woff') format('woff');
+  src: url('Nightingale-Light.woff2') format('woff2'),
+    url('Nightingale-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Nightingale';
+  src: url('Nightingale-Light.woff2') format('woff2'),
+    url('Nightingale-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sailec';
+  src: url('Sailec-Regular.woff2') format('woff2'),
+    url('Sailec-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sailec';
+  src: url('Sailec-Regular.woff2') format('woff2'),
+    url('Sailec-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 :root {
   --mainwhite: #fefefe;
@@ -170,7 +199,7 @@ ul {
   border-radius: 4px;
   right: -33px;
   top: 100%;
-
+  box-shadow: 0 13px 20px rgb(197, 197, 197);
 }
 
 .purplehover {
@@ -190,12 +219,13 @@ ul {
 
 .dropdown-content a {
   display: block;
-  padding: 17px 13px;
+  padding: 15px 10px;
   color: var(--black);
   text-decoration: none;
   font-size: 18px;
   margin-top: 2%;
   text-align: center;
+
 }
 
 .purplehover {
@@ -283,7 +313,7 @@ h1.cathy {
 
   max-width: 63%;
   margin: 0 auto;
-  padding-bottom: 10%;
+  padding-bottom: 7.8%;
 }
 
 #cathomepage {
@@ -351,7 +381,7 @@ h1.cathy {
 
   max-width: 63%;
   margin: 0 auto;
-  margin-bottom: .8%;
+  margin-bottom: 5%;
 }
 
 .course {
@@ -382,7 +412,7 @@ h1.cathy {
 }
 
 .guidesectionh2 {
-  padding-top: .37em;
+  padding-top: .25em;
   padding-bottom: .2em;
 }
 
@@ -406,7 +436,7 @@ h1.cathy {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 0;
+  padding: 60px 0 100px;
 }
 
 
@@ -466,6 +496,8 @@ footer>a {
 .catstagram {
   width: 2.3em;
 }
+
+
 
 @media (min-width: 1281px) {
   h2 {
@@ -545,6 +577,14 @@ footer>a {
     background-size: 300px;
   }
 
+  .h3 {
+    font-size: 2.2em;
+  }
+
+  .downloadlink {
+    font-size: 1.4em;
+  }
+
   .navbar, .catguide, .guidesection, .pdfdownloadsection {
     max-width: 80%;
   }
@@ -595,7 +635,6 @@ footer>a {
   }
 
   .guidesection {
-
     margin-bottom: 4.5%;
   }
 
@@ -626,6 +665,14 @@ footer>a {
     max-width: 90%;
   }
 
+  .catguide {
+
+    padding-bottom: 30%;
+  }
+
+  .catguide-inner {
+    padding-top: 8em;
+  }
 
   .h3 {
     font-size: 2.2em;
@@ -640,9 +687,17 @@ footer>a {
     background-size: 300px;
   }
 
+  .downloadsection {
+    margin-top: 90px;
+  }
+
   footer {
     padding: 0 1%;
 
+  }
+
+  footer>a {
+    padding-right: 8px;
   }
 }
 
@@ -703,6 +758,10 @@ footer>a {
     padding: 0 8%;
   }
 
+  footer>a {
+    padding-right: 8px;
+  }
+
   .nav-list .list-item {
     display: block;
     border-top: 2px solid var(--lavender);
@@ -729,7 +788,6 @@ footer>a {
 
   .navbar {
     max-width: 100%;
-
     flex-direction: column;
   }
 
